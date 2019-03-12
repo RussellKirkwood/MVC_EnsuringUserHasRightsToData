@@ -16,7 +16,7 @@ Then add a Helper Class which checks that the user's UserID or OrganizationID ap
 
 The Coding
 
-...
+```
 
 [HttpPost]
 public ActionResult SeeClient(Client model)
@@ -33,11 +33,11 @@ public ActionResult SeeClient(Client model)
   return View("NotAuthorized");
 }
 
-...
+```
 
 SecurityCheckerHelper Class looks something like this
 
-...
+```
 
 public class SecurityCheckerHelper
 {
@@ -55,4 +55,4 @@ public class SecurityCheckerHelper
         }
 }
 
-...
+```
