@@ -15,7 +15,7 @@ Add an UserID or OrganizationID field to each Record, this field signifies that 
 Then add a Helper Class which checks that the user's UserID or OrganizationID appears in that record before it is opened.
 
 The Coding
-
+...
 [HttpPost]
 public ActionResult SeeClient(Client model)
 {
@@ -30,9 +30,11 @@ public ActionResult SeeClient(Client model)
   
   return View("NotAuthorized");
 }
+...
 
 SecurityCheckerHelper Class looks something like this
 
+...
 public class SecurityCheckerHelper
 {
       public bool DoesCurrentUserHaveAccessToClient(string OrganizationID, int ID)
@@ -48,3 +50,4 @@ public class SecurityCheckerHelper
         return isOkay;
         }
 }
+...
